@@ -11,7 +11,7 @@ interface State {
   error: Error | null;
 }
 
-const webTargetOrigins = ['http://localhost:3000', 'https://orchids.app'];
+const webTargetOrigins = ['http://localhost:3000', 'https://pastel.app'];
 
 function sendErrorToIframeParent(error: any, errorInfo?: any) {
   if (Platform.OS === 'web' && typeof window !== 'undefined') {
@@ -100,7 +100,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <View id="orchids-error-boundary" className="flex-1 bg-white">
+        <View id="pastel-error-boundary" className="flex-1 bg-white">
           <View className="flex-1 items-center justify-center p-5">
             <Text className="mb-2 text-center text-4xl font-bold">Something went wrong</Text>
             <Text className="mb-3 text-center text-sm text-gray-600">
